@@ -1,8 +1,8 @@
 package com.mk.smarthospitaldatapipelinedashboard.controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.mk.smarthospitaldatapipelinedashboard.service.PipelineService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class PipelineController {
@@ -13,8 +13,8 @@ public class PipelineController {
         this.pipelineService = pipelineService;
     }
 
-    @GetMapping("/run-pipeline")
-    public String runPipeline(){
+    @GetMapping("/run")
+    public String runPipeline() {
 
         pipelineService.runPipeline();
 

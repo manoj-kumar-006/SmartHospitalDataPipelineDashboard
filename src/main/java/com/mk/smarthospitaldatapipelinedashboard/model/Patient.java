@@ -1,4 +1,5 @@
 package com.mk.smarthospitaldatapipelinedashboard.model;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -11,8 +12,10 @@ public class Patient {
     private String diagnosis;
     private String doctorId;
 
+    // Default constructor (required by JPA)
     public Patient(){}
 
+    // Constructor used by CSV reader
     public Patient(int patientId, String admissionDate, String diagnosis, String doctorId) {
         this.patientId = patientId;
         this.admissionDate = admissionDate;
@@ -20,19 +23,13 @@ public class Patient {
         this.doctorId = doctorId;
     }
 
-    public int getPatientId() {
-        return patientId;
-    }
+    public int getPatientId() { return patientId; }
+    public String getAdmissionDate() { return admissionDate; }
+    public String getDiagnosis() { return diagnosis; }
+    public String getDoctorId() { return doctorId; }
 
-    public String getAdmissionDate() {
-        return admissionDate;
-    }
-
-    public String getDiagnosis() {
-        return diagnosis;
-    }
-
-    public String getDoctorId() {
-        return doctorId;
-    }
+    public void setPatientId(int patientId) { this.patientId = patientId; }
+    public void setAdmissionDate(String admissionDate) { this.admissionDate = admissionDate; }
+    public void setDiagnosis(String diagnosis) { this.diagnosis = diagnosis; }
+    public void setDoctorId(String doctorId) { this.doctorId = doctorId; }
 }

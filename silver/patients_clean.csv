@@ -1,0 +1,11 @@
+patient_id,admission_date,diagnosis,doctor_id
+101,2026-03-01,Hypertension,D101
+102,2026-03-01,Diabetes,D102
+103,2026-03-02,Asthma,D103
+104,2026-03-02,Hypertension,D101
+105,2026-03-03,Heart Disease,D104
+106,2026-03-03,Diabetes,D102
+107,2026-03-04,Asthma,D103
+108,2026-03-04,Hypertension,D101
+109,2026-03-05,Diabetes,D102
+110,2026-03-05,Heart Disease,D104

@@ -1,27 +1,19 @@
 package com.mk.smarthospitaldatapipelinedashboard.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "patients", schema = "test")
 public class Patient {
 
     @Id
     private int patientId;
+
     private String admissionDate;
     private String diagnosis;
     private String doctorId;
 
-    // Default constructor (required by JPA)
     public Patient(){}
-
-    // Constructor used by CSV reader
-    public Patient(int patientId, String admissionDate, String diagnosis, String doctorId) {
-        this.patientId = patientId;
-        this.admissionDate = admissionDate;
-        this.diagnosis = diagnosis;
-        this.doctorId = doctorId;
-    }
 
     public int getPatientId() { return patientId; }
     public String getAdmissionDate() { return admissionDate; }

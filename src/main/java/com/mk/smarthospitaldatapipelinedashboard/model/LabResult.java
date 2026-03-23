@@ -3,6 +3,7 @@ package com.mk.smarthospitaldatapipelinedashboard.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "lab_reports", schema = "test")
 public class LabResult {
 
     @Id
@@ -14,8 +15,7 @@ public class LabResult {
     private String result;
     private String timestamp;
 
-    public LabResult(int i, String datum, String datum1, String datum2) {
-    }
+    public LabResult(){}
 
     public int getTestId() { return testId; }
     public int getPatientId() { return patientId; }

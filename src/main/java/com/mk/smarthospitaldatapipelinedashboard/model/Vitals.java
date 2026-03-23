@@ -3,6 +3,7 @@ package com.mk.smarthospitaldatapipelinedashboard.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "vitals", schema = "test")
 public class Vitals {
 
     @Id
@@ -15,19 +16,7 @@ public class Vitals {
     private double temperature;
     private String bloodPressure;
 
-    // Default constructor
     public Vitals(){}
-
-    // Constructor used for CSV ingestion
-    public Vitals(int patientId, String timestamp, int heartRate,
-                  double temperature, String bloodPressure) {
-
-        this.patientId = patientId;
-        this.timestamp = timestamp;
-        this.heartRate = heartRate;
-        this.temperature = temperature;
-        this.bloodPressure = bloodPressure;
-    }
 
     public int getRecordId() { return recordId; }
     public int getPatientId() { return patientId; }
